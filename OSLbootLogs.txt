@@ -1,0 +1,1286 @@
+bin % crc start --log-level debug
+DEBU CRC version: 2.9.0+589ab2cd                  
+DEBU OpenShift version: 4.11.3                    
+DEBU Podman version: 4.2.0                        
+DEBU Running 'crc start'                          
+DEBU Total memory of system is 34359738368 bytes  
+DEBU No new version available. The latest version is 2.9.0 
+DEBU Checking file: /Users/user/.crc/machines/crc/.crc-exist 
+INFO Checking if running as non-root              
+INFO Checking if crc-admin-helper executable is cached 
+INFO Checking for obsolete admin-helper executable 
+DEBU Checking if an older admin-helper executable is installed 
+DEBU No older admin-helper executable found       
+INFO Checking if running on a supported CPU architecture 
+DEBU GOARCH is amd64 GOOS is darwin               
+INFO Checking minimum RAM requirements            
+DEBU Total memory of system is 34359738368 bytes  
+INFO Checking if crc executable symlink exists    
+INFO Checking if running emulated on a M1 CPU     
+INFO Checking if vfkit is installed               
+INFO Checking if old launchd config for tray and/or daemon exists 
+INFO Checking if crc daemon plist file is present and loaded 
+DEBU Running 'bash -c launchctl list | grep com.redhat.crc.daemon | awk '{print $1}'' 
+DEBU Checking file: /Users/user/.crc/machines/crc/.crc-exist 
+INFO Loading bundle: crc_vfkit_4.11.3_amd64...    
+DEBU Cannot load secret from configuration: empty path 
+DEBU Cannot load secret from keyring: secret not found in keyring 
+CRC requires a pull secret to download content from Red Hat.
+You can copy it from the Pull Secret section of https://console.redhat.com/openshift/create/local.
+? Please enter the pull secret *******************************************************************************************************************************************************************************************************************************
+INFO Creating CRC VM for openshift 4.11.3...      
+DEBU Running pre-create checks...                 
+DEBU Creating machine...                          
+DEBU /Users/user/.crc/machines/crc/crc.img is already 33285996544 bytes 
+INFO Generating new SSH key pair...               
+INFO Generating new password for the kubeadmin user 
+DEBU Created /Users/user/.crc/machines/crc/.crc-exist 
+DEBU Machine successfully created                 
+DEBU Checking file: /Users/user/.crc/machines/crc/.crc-exist 
+INFO Starting CRC VM for openshift 4.11.3...      
+DEBU Updating CRC VM configuration                
+DEBU Running 'sw_vers -productVersion'            
+DEBU Running /Applications/Red Hat OpenShift Local.app/Contents/Resources/vfkit --cpus 4 --memory 9216 --kernel /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/vmlinuz-4.18.0-372.19.1.el8_6.x86_64 --initrd /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/initramfs-4.18.0-372.19.1.el8_6.x86_64.img --kernel-cmdline console=hvc0 BOOT_IMAGE=(hd0,gpt3)/ostree/rhcos-351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/vmlinuz-4.18.0-372.19.1.el8_6.x86_64 random.trust_cpu=on console=tty0 console=ttyS0,115200n8 ignition.platform.id=qemu ostree=/ostree/boot.0/rhcos/351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/0 root=UUID=4aa3ab5a-cf00-4013-bd06-e36de621a259 rw rootflags=prjquota boot=UUID=bb07ee9c-676b-4f0b-8fe3-f16b8d347c27 --device virtio-serial,logFilePath=/Users/user/.crc/machines/crc/vfkit.log --device virtio-fs,sharedDir=/Users/user,mountTag=dir0 --device virtio-rng --device virtio-blk,path=/Users/user/.crc/machines/crc/crc.img --device virtio-vsock,port=1024,socketURL=/Users/user/.crc/tap.sock 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="&{4 9216 /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/vmlinuz-4.18.0-372.19.1.el8_6.x86_64 console=hvc0 BOOT_IMAGE=(hd0,gpt3)/ostree/rhcos-351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/vmlinuz-4.18.0-372.19.1.el8_6.x86_64 random.trust_cpu=on console=tty0 console=ttyS0,115200n8 ignition.platform.id=qemu ostree=/ostree/boot.0/rhcos/351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/0 root=UUID=4aa3ab5a-cf00-4013-bd06-e36de621a259 rw rootflags=prjquota boot=UUID=bb07ee9c-676b-4f0b-8fe3-f16b8d347c27 /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/initramfs-4.18.0-372.19.1.el8_6.x86_64.img [virtio-serial,logFilePath=/Users/user/.crc/machines/crc/vfkit.log virtio-fs,sharedDir=/Users/user,mountTag=dir0 virtio-rng virtio-blk,path=/Users/user/.crc/machines/crc/crc.img virtio-vsock,port=1024,socketURL=/Users/user/.crc/tap.sock]}" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="boot parameters:" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="\tkernel: /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/vmlinuz-4.18.0-372.19.1.el8_6.x86_64" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="\tkernel command line:console=hvc0 BOOT_IMAGE=(hd0,gpt3)/ostree/rhcos-351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/vmlinuz-4.18.0-372.19.1.el8_6.x86_64 random.trust_cpu=on console=tty0 console=ttyS0,115200n8 ignition.platform.id=qemu ostree=/ostree/boot.0/rhcos/351d924e5358d9df3892b673570e50cba88ef0c2037f5ea9b642d9b4e03431da/0 root=UUID=4aa3ab5a-cf00-4013-bd06-e36de621a259 rw rootflags=prjquota boot=UUID=bb07ee9c-676b-4f0b-8fe3-f16b8d347c27" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="\tinitrd: /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/initramfs-4.18.0-372.19.1.el8_6.x86_64.img" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info  
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="virtual machine parameters:" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="\tvCPUs: 4" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="\tmemory: 9216 MiB" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info  
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Adding virtio-serial device (logFile: /Users/user/.crc/machines/crc/vfkit.log)" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Adding virtio-fs device" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Adding virtio-rng device" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Adding virtio-blk device (imagePath: /Users/user/.crc/machines/crc/crc.img)" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Adding virtio-vsock device" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="virtual machine is running" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="Exposing vsock port 1024 on /Users/user/.crc/tap.sock" 
+DEBU time="2022-09-26T12:01:33+02:00" level=info msg="waiting for VM to stop" 
+DEBU Waiting for machine to be running, this may take a few minutes... 
+DEBU retry loop: attempt 0                        
+DEBU Machine is up and running!                   
+INFO CRC instance is running with IP 127.0.0.1    
+DEBU Waiting until ssh is available               
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: exit 0                  
+DEBU Using ssh private keys: [/Users/user/.crc/machines/crc/id_ecdsa /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/id_ecdsa_crc] 
+DEBU SSH command results: err: ssh: handshake failed: read tcp 127.0.0.1:62147->127.0.0.1:2222: read: connection reset by peer, output:  
+DEBU error: Temporary error: ssh command error:
+command : exit 0
+err     : ssh: handshake failed: read tcp 127.0.0.1:62147->127.0.0.1:2222: read: connection reset by peer
+ - sleeping 1s 
+DEBU retry loop: attempt 1                        
+DEBU Running SSH command: exit 0                  
+DEBU Using ssh private keys: [/Users/user/.crc/machines/crc/id_ecdsa /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/id_ecdsa_crc] 
+DEBU SSH command results: err: ssh: handshake failed: read tcp 127.0.0.1:62148->127.0.0.1:2222: read: connection reset by peer, output:  
+DEBU error: Temporary error: ssh command error:
+command : exit 0
+err     : ssh: handshake failed: read tcp 127.0.0.1:62148->127.0.0.1:2222: read: connection reset by peer
+ - sleeping 1s 
+DEBU retry loop: attempt 2                        
+DEBU Running SSH command: exit 0                  
+DEBU Using ssh private keys: [/Users/user/.crc/machines/crc/id_ecdsa /Users/user/.crc/cache/crc_vfkit_4.11.3_amd64/id_ecdsa_crc] 
+DEBU DialContext: tcp unix:/Users/user/.crc/tap.sock 
+DEBU SSH command results: err: <nil>, output:     
+INFO CRC VM is running                            
+DEBU Running SSH command: cat /home/core/.ssh/authorized_keys 
+DEBU SSH command results: err: <nil>, output: ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAEjQWvHMqsmAT6fVZ+gfbIHEdhjHoeaXZ0ADjR/IvCTdgVJcJW9bMxZt4mFBzoKW2OMklbniF8+hUo2A43bdZtKTwEp0dMyKwNCyXklKXgePXYLHNcfiuGBcLAmDUH+vHYtjOtwDV2asBrpVW0hbiFRoI0xfHEgoQb3ed8Cb7YmY3rk0w== core 
+INFO Updating authorized keys...                  
+DEBU Creating /home/core/.ssh/authorized_keys with permissions 0644 in the CRC VM 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Running SSH command: rm /home/core/.ssh/authorized_keys.d/ignition 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU Running SSH command: realpath /dev/disk/by-label/root 
+DEBU SSH command results: err: <nil>, output: /dev/vda4 
+DEBU Using root access: Growing /dev/vda4 partition 
+DEBU Running SSH command: sudo /usr/bin/growpart /dev/vda 4 
+DEBU SSH command results: err: Process exited with status 1, output: NOCHANGE: partition 4 is size 63961055. it cannot be grown 
+DEBU No free space after /dev/vda4, nothing to do 
+DEBU Configuring shared directories               
+DEBU Running 'sw_vers -productVersion'            
+INFO Configuring shared directories               
+DEBU Using root access: Making / mutable          
+DEBU Running SSH command: sudo chattr -i /        
+DEBU SSH command results: err: <nil>, output:     
+DEBU Using root access: Creating /Users/user  
+DEBU Running SSH command: sudo mkdir -p /Users/user 
+DEBU SSH command results: err: <nil>, output:     
+DEBU Using root access: Making / immutable again  
+DEBU Running SSH command: sudo chattr +i /        
+DEBU SSH command results: err: <nil>, output:     
+DEBU Mounting tag dir0 at /Users/user         
+DEBU Using root access: Mounting /Users/user  
+DEBU Running SSH command: sudo mount -o context="system_u:object_r:container_file_t:s0" -t virtiofs dir0 /Users/user 
+DEBU SSH command results: err: <nil>, output:     
+DEBU Using root access: make root Podman socket accessible 
+DEBU Running SSH command: sudo chmod 777 /run/podman/ /run/podman/podman.sock 
+DEBU SSH command results: err: <nil>, output:     
+DEBU Running '/Applications/Red Hat OpenShift Local.app/Contents/Resources/crc-admin-helper-darwin rm api.crc.testing oauth-openshift.apps-crc.testing console-openshift-console.apps-crc.testing downloads-openshift-console.apps-crc.testing canary-openshift-ingress-canary.apps-crc.testing default-route-openshift-image-registry.apps-crc.testing' 
+DEBU Running '/Applications/Red Hat OpenShift Local.app/Contents/Resources/crc-admin-helper-darwin add 127.0.0.1 api.crc.testing oauth-openshift.apps-crc.testing console-openshift-console.apps-crc.testing downloads-openshift-console.apps-crc.testing canary-openshift-ingress-canary.apps-crc.testing default-route-openshift-image-registry.apps-crc.testing' 
+DEBU Creating /etc/resolv.conf with permissions 0644 in the CRC VM 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: host -R 3 foo.apps-crc.testing 
+DEBU SSH command results: err: <nil>, output: foo.apps-crc.testing has address 192.168.127.2 
+INFO Check internal and public DNS query...       
+DEBU Running SSH command: curl --head quay.io --proxy http://corporate.proxy.com:8080
+DEBU SSH command results: err: <nil>, output: HTTP/1.1 301 Moved Permanently
+Date: Mon, 26 Sep 2022 10:01:45 GMT
+Server: awselb/2.0
+Location: https://quay.io:443/
+Content-Type: text/html
+Content-Length: 134
+Proxy-Connection: Keep-Alive
+ 
+INFO Check DNS query from host...                 
+DEBU api.crc.testing resolved to [::1 127.0.0.1]  
+INFO Verifying validity of the kubelet certificates... 
+DEBU Running SSH command: date --date="$(sudo openssl x509 -in /var/lib/kubelet/pki/kubelet-client-current.pem -noout -enddate | cut -d= -f 2)" --iso-8601=seconds 
+DEBU SSH command results: err: <nil>, output: 2023-09-09T16:04:07+00:00 
+DEBU Running SSH command: date --date="$(sudo openssl x509 -in /var/lib/kubelet/pki/kubelet-server-current.pem -noout -enddate | cut -d= -f 2)" --iso-8601=seconds 
+DEBU SSH command results: err: <nil>, output: 2023-09-09T16:08:27+00:00 
+DEBU Running SSH command: date --date="$(sudo openssl x509 -in /etc/kubernetes/static-pod-resources/kube-apiserver-certs/configmaps/aggregator-client-ca/ca-bundle.crt -noout -enddate | cut -d= -f 2)" --iso-8601=seconds 
+DEBU SSH command results: err: <nil>, output: 2023-09-09T16:09:33+00:00 
+INFO Starting kubelet service                     
+DEBU Using root access: Executing systemctl daemon-reload command 
+DEBU Running SSH command: sudo systemctl daemon-reload 
+DEBU SSH command results: err: <nil>, output:     
+DEBU Using root access: Executing systemctl start kubelet 
+DEBU Running SSH command: sudo systemctl start kubelet 
+DEBU SSH command results: err: <nil>, output:     
+INFO Waiting for kube-apiserver availability... [takes around 2min] 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 1                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 2                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 3                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 4                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 5                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 1, output:  
+DEBU The connection to the server api.crc.testing:6443 was refused - did you specify the right host or port? 
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 1
+ - sleeping 1s 
+DEBU retry loop: attempt 6                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 7                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 8                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 9                        
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 10                       
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 11                       
+DEBU Running SSH command: timeout 5s oc get nodes --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                 STATUS   ROLES           AGE   VERSION
+crc-wkzjw-master-0   Ready    master,worker   17d   v1.24.0+b62823b 
+DEBU NAME                 STATUS   ROLES           AGE   VERSION
+crc-wkzjw-master-0   Ready    master,worker   17d   v1.24.0+b62823b 
+DEBU Waiting for availability of resource type 'cm' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get cm --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                       DATA   AGE
+kube-root-ca.crt           1      17d
+openshift-service-ca.crt   1      17d 
+DEBU NAME                       DATA   AGE
+kube-root-ca.crt           1      17d
+openshift-service-ca.crt   1      17d 
+DEBU Running SSH command: timeout 30s oc delete -n openshift-machine-config-operator cm machine-config-controller --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: configmap "machine-config-controller" deleted 
+DEBU Waiting for availability of resource type 'secret' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get secret --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                       TYPE                                  DATA   AGE
+builder-dockercfg-kcq7p    kubernetes.io/dockercfg               1      17d
+builder-token-l4w79        kubernetes.io/service-account-token   4      17d
+default-dockercfg-nv42r    kubernetes.io/dockercfg               1      17d
+default-token-5m2bq        kubernetes.io/service-account-token   4      17d
+deployer-dockercfg-l2t6k   kubernetes.io/dockercfg               1      17d
+deployer-token-glfhl       kubernetes.io/service-account-token   4      17d 
+DEBU NAME                       TYPE                                  DATA   AGE
+builder-dockercfg-kcq7p    kubernetes.io/dockercfg               1      17d
+builder-token-l4w79        kubernetes.io/service-account-token   4      17d
+default-dockercfg-nv42r    kubernetes.io/dockercfg               1      17d
+default-token-5m2bq        kubernetes.io/service-account-token   4      17d
+deployer-dockercfg-l2t6k   kubernetes.io/dockercfg               1      17d
+deployer-token-glfhl       kubernetes.io/service-account-token   4      17d 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+INFO Adding user's pull secret to the cluster...  
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Waiting for availability of resource type 'machineconfigs' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 1                        
+DEBU Running SSH command: timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 2                        
+DEBU Running SSH command: timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: Process exited with status 124, output:  
+DEBU                                              
+DEBU error: Temporary error: ssh command error:
+command : timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig
+err     : Process exited with status 124
+ - sleeping 1s 
+DEBU retry loop: attempt 3                        
+DEBU Running SSH command: timeout 5s oc get machineconfigs --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE
+00-master                                          f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+00-worker                                          f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-master-container-runtime                        f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-master-kubelet                                  f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-worker-container-runtime                        f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-worker-kubelet                                  f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-master-generated-registries                     f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-master-ssh                                                                                 3.2.0             17d
+99-node-sizing-for-crc                                                                        3.2.0             17d
+99-openshift-machineconfig-master-dummy-networks                                              3.2.0             17d
+99-worker-generated-registries                     f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-worker-ssh                                                                                 3.2.0             17d
+rendered-master-33c53683fbe3af8f91c74e49cf5fd2ce   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             13s
+rendered-master-7e84412b31fedbb222cb3f059db71df7   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             16d
+rendered-worker-13e25af0cd98152e1820b44ddfc1fdff   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             16d
+rendered-worker-76925dac2d526ed886c4a05085261c0f   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             13s 
+DEBU NAME                                               GENERATEDBYCONTROLLER                      IGNITIONVERSION   AGE
+00-master                                          f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+00-worker                                          f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-master-container-runtime                        f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-master-kubelet                                  f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-worker-container-runtime                        f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+01-worker-kubelet                                  f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-master-generated-registries                     f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-master-ssh                                                                                 3.2.0             17d
+99-node-sizing-for-crc                                                                        3.2.0             17d
+99-openshift-machineconfig-master-dummy-networks                                              3.2.0             17d
+99-worker-generated-registries                     f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             17d
+99-worker-ssh                                                                                 3.2.0             17d
+rendered-master-33c53683fbe3af8f91c74e49cf5fd2ce   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             13s
+rendered-master-7e84412b31fedbb222cb3f059db71df7   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             16d
+rendered-worker-13e25af0cd98152e1820b44ddfc1fdff   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             16d
+rendered-worker-76925dac2d526ed886c4a05085261c0f   f82d52a9b58c3d872984d42f38e7c4164e8c4caf   3.2.0             13s 
+DEBU Running SSH command: timeout 30s oc get machineconfigs 99-master-ssh -o jsonpath='{.spec.config.passwd.users[0].sshAuthorizedKeys[0]}' --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAEjQWvHMqsmAT6fVZ+gfbIHEdhjHoeaXZ0ADjR/IvCTdgVJcJW9bMxZt4mFBzoKW2OMklbniF8+hUo2A43bdZtKTwEp0dMyKwNCyXklKXgePXYLHNcfiuGBcLAmDUH+vHYtjOtwDV2asBrpVW0hbiFRoI0xfHEgoQb3ed8Cb7YmY3rk0w== core 
+INFO Updating SSH key to machine config resource... 
+DEBU Running SSH command: timeout 30s oc patch machineconfig 99-master-ssh -p '{"spec": {"config": {"passwd": {"users": [{"name": "core", "sshAuthorizedKeys": ["ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAD3HcuBfniNd3SfX9SvOhAHumnW/bOretbpwEO91LmdhTnFH+CcD7GtNwva7t0MCGXBQR+Omr5ZYDmcgMKr/4l1CgEtdtJLs7A+D+qj8esNhFNuTN7PgvZmkBbirrTIOxh6KS579Jyfl3g4DnZhhSAwG4ckNotrzVrtBLMA6s+8gTbSgg=="]}]}}}}' --type merge --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: machineconfig.machineconfiguration.openshift.io/99-master-ssh patched 
+INFO Waiting for user's pull secret part of instance disk... 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU error: Temporary error: pull secret not updated to disk - sleeping 2s 
+DEBU retry loop: attempt 1                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU error: Temporary error: pull secret not updated to disk - sleeping 2s 
+DEBU retry loop: attempt 2                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+INFO Adding proxy configuration to the cluster... 
+DEBU Waiting for availability of resource type 'proxy' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get proxy --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME      AGE
+cluster   17d 
+DEBU NAME      AGE
+cluster   17d                  
+DEBU Patch string {"spec":{"httpProxy":"http://corporate.proxy.com:8080","httpsProxy":"http://corporate.proxy.com:8080","trustedCA":{"name":""}}} 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Waiting for availability of resource type 'secret' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get secret --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                       TYPE                                  DATA   AGE
+builder-dockercfg-kcq7p    kubernetes.io/dockercfg               1      17d
+builder-token-l4w79        kubernetes.io/service-account-token   4      17d
+default-dockercfg-nv42r    kubernetes.io/dockercfg               1      17d
+default-token-5m2bq        kubernetes.io/service-account-token   4      17d
+deployer-dockercfg-l2t6k   kubernetes.io/dockercfg               1      17d
+deployer-token-glfhl       kubernetes.io/service-account-token   4      17d 
+DEBU NAME                       TYPE                                  DATA   AGE
+builder-dockercfg-kcq7p    kubernetes.io/dockercfg               1      17d
+builder-token-l4w79        kubernetes.io/service-account-token   4      17d
+default-dockercfg-nv42r    kubernetes.io/dockercfg               1      17d
+default-token-5m2bq        kubernetes.io/service-account-token   4      17d
+deployer-dockercfg-l2t6k   kubernetes.io/dockercfg               1      17d
+deployer-token-glfhl       kubernetes.io/service-account-token   4      17d 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+INFO Changing the password for the kubeadmin user 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Waiting for availability of resource type 'clusterversion' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get clusterversion --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS
+version   4.11.3    True        False         17d     Cluster version is 4.11.3 
+DEBU NAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS
+version   4.11.3    True        False         17d     Cluster version is 4.11.3 
+DEBU Running SSH command: timeout 30s oc get clusterversion version -o jsonpath="{['spec']['clusterID']}" --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output:     
+INFO Updating cluster ID...                       
+DEBU Running SSH command: timeout 30s oc patch clusterversion version -p '{"spec":{"clusterID":"4d652099-1bd4-4c0c-9224-0063f3ffe197"}}' --type merge --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: clusterversion.config.openshift.io/version patched 
+DEBU Creating /tmp/routes-controller.json with permissions 0644 in the CRC VM 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Running SSH command: timeout 30s oc apply -f /tmp/routes-controller.json --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: pod/routes-controller created 
+DEBU Waiting for availability of resource type 'configmaps' 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: timeout 5s oc get configmaps --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: NAME                       DATA   AGE
+kube-root-ca.crt           1      17d
+openshift-service-ca.crt   1      17d 
+DEBU NAME                       DATA   AGE
+kube-root-ca.crt           1      17d
+openshift-service-ca.crt   1      17d 
+DEBU Running SSH command: timeout 30s oc get configmaps admin-kubeconfig-client-ca -n openshift-config -o jsonpath="{.data.ca-bundle\.crt}" --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: -----BEGIN CERTIFICATE-----
+MIIDMDCCAhigAwIBAgIIY42Sg8C4CrcwDQYJKoZIhvcNAQELBQAwNjESMBAGA1UE
+CxMJb3BlbnNoaWZ0MSAwHgYDVQQDExdhZG1pbi1rdWJlY29uZmlnLXNpZ25lcjAe
+Fw0yMjA5MDgxNTI4MTZaFw0zMjA5MDUxNTI4MTZaMDYxEjAQBgNVBAsTCW9wZW5z
+aGlmdDEgMB4GA1UEAxMXYWRtaW4ta3ViZWNvbmZpZy1zaWduZXIwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCt9uSm040cG6J7nAoWtPj9MtUk2BbSr6nj
+fTgqm9S0oL50uO1876nDacfnvzfy6nAoevKvQiMz97BHea7JTMgJA0SSg7dUjgoa
+qdeDGJuvkhW+xcwSaqI9OIjQcd3J9XCJZAqKnMVQ/cvqfsqhlmjg2BIWXUASYtg5
+GBnYf74gAgBr3rrs8yBEvNc5eacUTBBV2zorU6ZcGHQWC2eICkd+WsQmYFFj9Mv6
+zRzBZl/Bqfij+p/WhLmm5k5A6FjfvezJUIO+pusUCuzAlLGA2kVBohYY+C4v2zxd
+XZy26s4nVtQBCrQq4s+cjQ7+SESVuPO67YlfNpsFsPvYY0D0thofAgMBAAGjQjBA
+MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBSpyI00
+yjRp6GmZMZzRJkb3e4F8gzANBgkqhkiG9w0BAQsFAAOCAQEAQ6oBCYh5EUzTan2H
+0UnY/du0MqfVg4lhZldAjWrcQh2gwm+FdMNHfHAFUc62HUwZMvYHrh8yQkksxBmb
+X2dD1sTQ0yqDCo4a7vK2WoL+lP5u0ALe1ibJMKff2nkvKHngnlrC15Nv8Sv/GaKc
+vbdGTL49MV8PGa6anyQATZUHbl53UJtsk5jZySlArnztoIqRMIQrME7z34e/oock
+NAwLjPfeMrfNiMJrSrra7f/8/f75ExK5mXQUeqrqFfyt2V4gDWUHTZJcsb5nZE5s
+3QdQvlgT3WC10jDAAsfLz6RCC4l2nn4crEsOmGV31O5lS5BGRbqQItC6evx17ZhS
+l9p04Q==
+-----END CERTIFICATE----- 
+INFO Updating root CA cert to admin-kubeconfig-client-ca configmap... 
+DEBU Running SSH command: timeout 30s oc patch configmap admin-kubeconfig-client-ca -n openshift-config --patch '{"data": {"ca-bundle.crt": "-----BEGIN CERTIFICATE-----\nMIIDSjCCAjKgAwIBAgIIKfaymwx7VzwwDQYJKoZIhvcNAQELBQAwPTESMBAGA1UE\nCxMJb3BlbnNoaWZ0MScwJQYDVQQDEx5hZG1pbi1rdWJlY29uZmlnLXNpZ25lci1j\ndXN0b20wHhcNMjIwOTI2MTAwMzQ3WhcNMzIwOTIzMTAwMzQ3WjA9MRIwEAYDVQQL\nEwlvcGVuc2hpZnQxJzAlBgNVBAMTHmFkbWluLWt1YmVjb25maWctc2lnbmVyLWN1\nc3RvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK7M2Sfh+hmZ8TCL\nkG1qmv/28Dl6ZcKkjoY+oYOMxAi5MFoKmXiih2KevL1yXhbUwNBUGKrumgZuftma\nb7TMPoD5B7JeDCt1i9xpLXEhA6aUoATZ8RBhOPfnYM7wriJsEiT2/LrN1Gw+vFoC\nGjmGoY3phErQoPohAAeIdRp2GKZfb7ZMa14BU9xfIYF6bYaoTD1AdIqTVtRY/XT7\ni1BuDS4v/qCGgVNoYtf0sGX2FtKLE7C+VU/s6/gdX98a83x6dJWtAzqRAZ14lVCm\nz9ORxVI40rCtqjsgZC3xPWNHI6ADslyYa8q1CcukU4sSGicu0W6SJctTvF8n7+1V\nMufgofECAwEAAaNOMEwwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8w\nKQYDVR0OBCIEIFXZFc6GFnkBT+6i43Ukc96jkB+mRtqbin5gmRiwluLKMA0GCSqG\nSIb3DQEBCwUAA4IBAQA4/EvxM0GHAvKpcX0VFy1470KSjPAgxQwU6mqiVSbQPUJw\n5W2ruJFbjVXSgPpbAHU19EsQ03ovPWPGqs9VYioJoT6/o3+I6cpCSTEY2EjI+FYn\nRFo9LrMYLsiJWbTlKvtg2HwBGFlgDC/xewzoRfUohOtMbs2rn6g97bGgkBZ/xhk2\nDKpdyQrFI60kV2UaCTcynfeMxsgWwQc/WlTGYk7FAdezrpdeyMIKvc3a1EjOmMKn\nnZuRKn5OLsWCfPwjQ86pbOR1WVhy9DpkAqqE5wMcVLNMl8qkxadUoBc9x1WByzG0\nbVy980l3RuXitX5KSHgFVe3ifHkHxEEVxM7MlD1K\n-----END CERTIFICATE-----\n"}}' --context admin --cluster crc --kubeconfig /opt/kubeconfig 
+DEBU SSH command results: err: <nil>, output: configmap/admin-kubeconfig-client-ca patched 
+DEBU Creating /opt/kubeconfig with permissions 0644 in the CRC VM 
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+INFO Starting openshift instance... [waiting for the cluster to stabilize] 
+DEBU authentication operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator not available, Reason: RouteHealth_RouteNotAdmitted 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is still progressing, Reason: Deploying 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, network, service-ca 
+DEBU authentication operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator not available, Reason: RouteHealth_RouteNotAdmitted 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is still progressing, Reason: Deploying 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, network, service-ca 
+DEBU authentication operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator not available, Reason: RouteHealth_RouteNotAdmitted 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is still progressing, Reason: Deploying 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, network, service-ca 
+DEBU authentication operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator not available, Reason: RouteHealth_RouteNotAdmitted 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is still progressing, Reason: Deploying 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, network, service-ca 
+DEBU authentication operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator not available, Reason: RouteHealth_RouteNotAdmitted 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is still progressing, Reason: Deploying 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod::APIServices_PreconditionNotReady 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, network, service-ca 
+DEBU authentication operator is degraded, Reason: IngressStateEndpoints_MissingSubsets::OAuthServerDeployment_UnavailablePod::OAuthServerRouteEndpointAccessibleController_SyncError::OAuthServerServiceEndpointAccessibleController_SyncError::OAuthServerServiceEndpointsEndpointAccessibleController_SyncError 
+DEBU authentication operator not available, Reason: OAuthServerDeployment_NoPod::OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU console operator is still progressing, Reason: SyncLoopRefresh_InProgress 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-apiserver operator is degraded, Reason: APIServerDeployment_UnavailablePod 
+DEBU openshift-apiserver operator not available, Reason: APIServerDeployment_NoPod 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: console, image-registry, service-ca 
+DEBU authentication operator not available, Reason: OAuthServerDeployment_NoPod 
+DEBU console operator is still progressing, Reason: SyncLoopRefresh_InProgress 
+DEBU image-registry operator not available, Reason: NoReplicasAvailable::NodeCADaemonNoAvailableReplicas 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 4 operators are progressing: console, image-registry, openshift-controller-manager, service-ca 
+DEBU authentication operator not available, Reason: OAuthServerDeployment_NoPod 
+DEBU image-registry operator is still progressing, Reason: DeploymentNotCompleted 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+DEBU service-ca operator is still progressing, Reason: _ManagedDeploymentsAvailable 
+INFO 3 operators are progressing: image-registry, openshift-controller-manager, service-ca 
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU authentication operator not available, Reason: OAuthServerRouteEndpointAccessibleController_EndpointUnavailable::OAuthServerServiceEndpointAccessibleController_EndpointUnavailable 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+INFO 2 operators are progressing: authentication, openshift-controller-manager 
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+INFO 2 operators are progressing: authentication, openshift-controller-manager 
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+INFO 2 operators are progressing: authentication, openshift-controller-manager 
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+DEBU openshift-controller-manager operator is still progressing, Reason: _DesiredStateNotYetAchieved 
+INFO 2 operators are progressing: authentication, openshift-controller-manager 
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator authentication is progressing       
+DEBU authentication operator is still progressing, Reason: OAuthServerDeployment_NewGeneration 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator authentication is progressing       
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+DEBU network operator is degraded, Reason: InvalidProxyConfig 
+INFO Operator network is degraded                 
+ERRO Cluster is not ready: cluster operators are still not stable after 15m1.270442441s 
+INFO Waiting for the proxy configuration to be applied... 
+DEBU retry loop: attempt 0                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 1                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 2                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 3                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 4                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 5                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 6                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 7                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 8                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 9                        
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 10                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 11                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 12                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 13                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 14                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 15                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 16                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 17                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 18                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 19                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 20                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 21                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 22                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 23                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 24                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 25                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 26                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 27                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 28                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 29                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 30                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 31                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 32                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 33                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 34                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 35                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 36                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 37                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 38                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 39                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 40                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 41                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 42                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 43                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 44                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 45                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 46                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 47                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 48                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 49                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 50                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 51                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 52                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 53                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 54                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 55                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 56                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 57                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 58                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 59                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 60                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 61                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 62                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 63                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 64                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 65                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 66                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 67                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 68                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 69                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 70                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 71                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 72                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 73                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 74                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 75                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 76                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 77                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 78                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 79                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 80                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 81                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 82                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 83                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 84                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 85                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 86                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 87                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 88                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 89                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 90                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 91                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 92                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 93                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 94                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 95                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 96                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 97                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 98                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 99                       
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 100                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 101                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 102                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 103                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 104                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 105                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 106                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 107                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 108                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 109                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 110                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 111                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 112                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 113                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 114                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 115                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 116                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 117                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 118                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 119                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 120                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 121                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 122                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 123                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 124                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 125                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 126                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 127                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 128                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 129                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 130                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 131                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 132                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 133                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 134                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 135                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 136                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 137                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 138                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 139                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU retry loop: attempt 140                      
+DEBU Running SSH command: <hidden>                
+DEBU SSH command succeeded                        
+DEBU Proxy changes for cluster in progress        
+DEBU error: Temporary error:  - sleeping 2s       
+DEBU RetryAfter timeout after 141 tries           
+DEBU Failed to propagate proxy settings to cluster 
+INFO Adding crc-admin and crc-developer contexts to kubeconfig... 
+Started the OpenShift cluster.
+
+The server is accessible via web console at:
+  https://console-openshift-console.apps-crc.testing
+
+Log in as administrator:
+  Username: kubeadmin
+  Password: the-password
+
+Log in as user:
+  Username: developer
+  Password: developer
+
+Use the 'oc' command line interface:
+  $ eval $(crc oc-env)
+  $ oc login -u developer https://api.crc.testing:6443
+user bin % 
